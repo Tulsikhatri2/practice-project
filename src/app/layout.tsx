@@ -19,16 +19,20 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
+  children,user
 }: Readonly<{
   children: React.ReactNode;
+  user: React.ReactNode;
 }>) {
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {user}
         {children}
+        
+        {/* <div id="portal-root"></div> */}
       </body>
     </html>
   );
